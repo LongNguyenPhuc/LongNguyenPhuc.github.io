@@ -4,9 +4,7 @@ module.exports = [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
-  {
-    ignores: ['**/out', '**/dist', '**/modules/api/*/*.ts']
-  },
+  { ignores: ['**/out', '**/dist', '**/modules/api/*/*.ts', '**/vite.config.*.timestamp*', '**/vitest.config.*.timestamp*'] },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     ignores: ['**/preview.tsx', '**/*.config.ts', '**/config/*.ts'],
@@ -17,12 +15,7 @@ module.exports = [
           enforceBuildableLibDependency: true,
           allowCircularSelfDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
-          depConstraints: [
-            {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*']
-            }
-          ]
+          depConstraints: [{ sourceTag: '*', onlyDependOnLibsWithTags: ['*'] }]
         }
       ]
     }

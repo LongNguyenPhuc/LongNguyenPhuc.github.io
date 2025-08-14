@@ -19,8 +19,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@fosco-frontend/ui/*": ["./modules/ui/src/*"],
-      "@lib-ui/*": ["./modules/ui/src/*"],
       "@api/*": ["./modules/api/*"],
       "@app-admin/*": ["./apps/admin/src/*"],
       "@app-portal/*": ["./apps/portal/src/*"],
@@ -29,6 +27,7 @@
       "@i18n/*": ["./libs/i18n/*"],
       "@integrations/*": ["./libs/integrations/*"],
       "@lib-types/*": ["./libs/types/*"],
+      "@lib-ui/*": ["./modules/ui/src/*"],
       "@links/*": ["./libs/links/*"],
       "@schemas/*": ["./libs/schemas/*"],
       "@stores/*": ["./libs/stores/*"],

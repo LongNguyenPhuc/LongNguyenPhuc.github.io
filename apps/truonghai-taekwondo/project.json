@@ -1,0 +1,9 @@
+{
+  "name": "truonghai-taekwondo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/truonghai-taekwondo/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project truonghai-taekwondo --web",
+  "targets": {}
+}
