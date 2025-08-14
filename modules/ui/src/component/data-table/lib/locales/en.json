@@ -1,0 +1,8 @@
+{
+  "isEmpty": "No data available",
+  "pagination": {
+    "pageInputLabel": "Move to page",
+    "pageSizeSelectionLabel": "Number of rows per page",
+    "totalPage": "Total pages:"
+  }
+}

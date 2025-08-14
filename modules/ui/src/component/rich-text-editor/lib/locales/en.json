@@ -1,0 +1,111 @@
+{
+  "placeholder": "Enter content...",
+  "bold": "Bold",
+  "italic": "Italic",
+  "underline": "Underline",
+  "strike": "Strike",
+  "horizontalRule": "Horizontal rule",
+  "leftAlign": "Left align",
+  "centerAlign": "Center align",
+  "rightAlign": "Right align",
+  "justifyAlign": "Justify align",
+  "codeBlock": "Code block",
+  "blockquote": "Blockquote",
+  "superscript": "Superscript",
+  "subscript": "Subscript",
+  "clearFormatting": "Clear formatting",
+  "headingLabel": "Heading",
+  "heading": {
+    "heading1": "Heading 1",
+    "heading2": "Heading 2",
+    "heading3": "Heading 3",
+    "heading4": "Heading 4",
+    "heading5": "Heading 5",
+    "heading6": "Heading 6"
+  },
+  "listLabel": "List",
+  "list": {
+    "bulletList": "Bullet List",
+    "orderedList": "Ordered List",
+    "taskList": "Task List"
+  },
+  "fontLabel": "Font Family",
+  "defaultFont": "Default",
+  "fontSize": "Font Size",
+  "lineHeight": "Line Height",
+  "uploadImage": {
+    "label": "Image",
+    "tooltip": "Upload Image",
+    "error": "An error occurred. Please try again!",
+    "invalid": "Invalid image format",
+    "isUploading": "Uploading...",
+    "clickToUpload": "Click to upload or drag and drop image",
+    "addButton": "Add Image",
+    "tabLabel": "URL"
+  },
+  "uploadFile": {
+    "label": "File",
+    "tooltip": "Upload File",
+    "error": "An error occurred. Please try again!",
+    "invalid": "Invalid file format",
+    "isUploading": "Uploading...",
+    "clickToUpload": "Click to upload or drag and drop file",
+    "addButton": "Add File",
+    "tabLabel": "URL"
+  },
+  "uploadVideo": {
+    "invalid": "Invalid video format",
+    "addButton": "Add Video"
+  },
+  "mark": {
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "paintFormat": "Paint Format"
+  },
+  "table": {
+    "label": "Table",
+    "optionLabel": "Table options",
+    "columnGroup": {
+      "label": "Add/Delete Column",
+      "addBefore": "Add Column Before",
+      "addAfter": "Add Column After",
+      "delete": "Delete Column"
+    },
+    "rowGroup": {
+      "label": "Add/Delete Row",
+      "addBefore": "Add Row Before",
+      "addAfter": "Add Row After",
+      "delete": " Delete Row"
+    },
+    "cellGroup": {
+      "label": "Merge/Split Cell",
+      "merge": "Merge Cell",
+      "split": "Split Cell"
+    },
+    "header": {
+      "label": "Header",
+      "toggleHeaderColumn": "Toggle Header Column",
+      "toggleHeaderRow": "Toggle Header Row",
+      "toggleHeaderCell": "Toggle Header Cell"
+    },
+    "delete": "Delete Table",
+    "backgroundColor": "Background color",
+    "removeBackgroundColor": "Remove background color"
+  },
+  "specialCharacter": "Special Character",
+  "textColor": "Text Color",
+  "removeTextColor": "Remove Text Color",
+  "highlight": "Highlight",
+  "removeHighlight": "Remove Highlight",
+  "undo": "Undo",
+  "redo": "Redo",
+  "search": "Search",
+  "replace": "Replace",
+  "replaceAll": "Replace All",
+  "replaceWith": "Replace With",
+  "zoomOut": "Zoom Out",
+  "fullscreen": "Fullscreen",
+  "preview": "Preview",
+  "print": "Print"
+}

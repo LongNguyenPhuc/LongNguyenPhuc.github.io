@@ -1,0 +1,2257 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "UTC2",
+    "description": "Coder by Meu TEAM"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1.0",
+  "schemes": [],
+  "securityDefinitions": {
+    "Bearer": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey"
+    },
+    "Signature": {
+      "name": "Signature",
+      "in": "header",
+      "type": "apiKey"
+    }
+  },
+  "consumes": ["application/json", "application/x-www-form-urlencoded"],
+  "paths": {
+    "/category": {
+      "get": {
+        "tags": ["Category"],
+        "description": "Endpoint to get categories",
+        "parameters": [
+          {
+            "name": "type",
+            "type": "string",
+            "in": "query"
+          },
+          {
+            "name": "categoryId",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/category/post/{categoryId}": {
+      "post": {
+        "tags": ["Category"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPostCategory"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/category/put/{id}": {
+      "put": {
+        "tags": ["Category"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPostCategory"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/category/delete/{id}": {
+      "delete": {
+        "tags": ["Category"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/feedback/post": {
+      "post": {
+        "tags": ["Feedback"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postFeedback"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/feedback/put/{id}": {
+      "put": {
+        "tags": ["Feedback"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putFeedback"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/feedback/delete/{id}": {
+      "delete": {
+        "tags": ["Feedback"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/feedback/getAll": {
+      "get": {
+        "tags": ["Feedback"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filters",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/file": {
+      "post": {
+        "tags": ["File"],
+        "description": "Endpoint to upload file",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "formData",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/registerForm": {
+      "post": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/footer/post": {
+      "post": {
+        "tags": ["Footer"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postFooter"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/footer/put/{id}": {
+      "put": {
+        "tags": ["Footer"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putFooter"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/footer/delete/{id}": {
+      "delete": {
+        "tags": ["Footer"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/Footer/getAll": {
+      "get": {
+        "tags": ["Footer"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "type",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/footer/bulkPut": {
+      "put": {
+        "tags": ["Footer"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/bulkPutFooter"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/menu": {
+      "get": {
+        "tags": ["Menu"],
+        "description": "Endpoint to get menu",
+        "parameters": [
+          {
+            "name": "filters",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "post": {
+        "tags": ["Menu"],
+        "description": "Endpoint to post menu",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postMenu"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["Menu"],
+        "description": "Endpoint to post menu",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/deleteMenu"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/menu/getBreadcrumbs": {
+      "get": {
+        "tags": ["Menu"],
+        "description": "Endpoint to get menu",
+        "parameters": [
+          {
+            "name": "type",
+            "type": "string",
+            "in": "query"
+          },
+          {
+            "name": "seo_text",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/menu/{id}": {
+      "get": {
+        "tags": ["Menu"],
+        "description": "Endpoint to get menu by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": ["Menu"],
+        "description": "Endpoint to edit menu by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postMenu"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["Menu"],
+        "description": "Endpoint to delete menu by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/menu/{id}/addPostConnects": {
+      "post": {
+        "tags": ["Menu"],
+        "description": "Endpoint to edit menu by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postMenuAddConnects"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/menu/{id}/editPostConnects": {
+      "put": {
+        "tags": ["Menu"],
+        "description": "Endpoint to edit menu by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postMenuAddConnects"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/page-config/post": {
+      "post": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postPageConfig"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/page-config/put/{id}": {
+      "put": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPageConfig"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/page-config/delete/{id}": {
+      "delete": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/page-config/getAll": {
+      "get": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filters",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/page-config/getAllLinks": {
+      "get": {
+        "tags": ["Page Config"],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/page-config/getPageConfigTab/{pageConfigCode}": {
+      "get": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "pageConfigCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/page-config/getPageConfigTabById/{id}": {
+      "get": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/page-config/putPageConfigTab/{id}": {
+      "put": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPageConfigTab"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/page-config/putPageConfigTabContent/{id}": {
+      "put": {
+        "tags": ["Page Config"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPageConfigTabContent"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}/createUpdateMultipleConnect": {
+      "post": {
+        "tags": ["Post"],
+        "description": "Endpoint to create post connect",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postListConnect"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post": {
+      "get": {
+        "tags": ["Post"],
+        "description": "Endpoint to get post",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filters",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "subCategorys",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": ["Post"],
+        "description": "Endpoint to post post",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postPost"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/createConnect": {
+      "post": {
+        "tags": ["Post"],
+        "description": "Endpoint to create post connect",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postConnect"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}": {
+      "get": {
+        "tags": ["Post"],
+        "description": "Endpoint to get post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": ["Post"],
+        "description": "Endpoint to edit post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postPost"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["Post"],
+        "description": "Endpoint to delete post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}/editConnect": {
+      "put": {
+        "tags": ["Post"],
+        "description": "Endpoint to edit connect by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/postConnect"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}/deleteConnect": {
+      "delete": {
+        "tags": ["Post"],
+        "description": "Endpoint to edit post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}/saveContent": {
+      "put": {
+        "tags": ["Post"],
+        "description": "Endpoint to edit post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content_type",
+            "in": "query",
+            "description": "mobile / tablet",
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/putPostSaveContent"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/post/{id}/increaseCount": {
+      "post": {
+        "tags": ["Post"],
+        "description": "Endpoint to increase post by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/release/release-version": {
+      "get": {
+        "tags": ["Release"],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/statistic/siteAccess": {
+      "get": {
+        "tags": ["Statistic"],
+        "description": "Endpoint to fetch data",
+        "parameters": [
+          {
+            "name": "option",
+            "type": "string",
+            "in": "query"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/statistic/pageAccess": {
+      "get": {
+        "tags": ["Statistic"],
+        "description": "Endpoint to fetch data",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortOrder",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/statistic/pageRanking": {
+      "get": {
+        "tags": ["Statistic"],
+        "description": "Endpoint to fetch data",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortOrder",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/userAccess": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/user/": {
+      "get": {
+        "tags": ["User"],
+        "description": "Endpoint to get all user",
+        "parameters": [
+          {
+            "name": "currentPage",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "pageSize",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "filters",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "permisionIds",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": ["User"],
+        "description": "Endpoint to add new user",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/addNewUser"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/getAllPermisions": {
+      "get": {
+        "tags": ["User"],
+        "description": "Endpoint to all user permisions",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/register": {
+      "post": {
+        "tags": ["User"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/register"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "tags": ["User"],
+        "description": "Endpoint to get token with email & password",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User name + password",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/login"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/logout": {
+      "post": {
+        "tags": ["User"],
+        "description": "Endpoint to log user out",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User name + password",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/login"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/getMeData": {
+      "get": {
+        "tags": ["User"],
+        "description": "Endpoint to get token with email & password",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/editMeData": {
+      "put": {
+        "tags": ["User"],
+        "description": "Endpoint to edit user",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/forgetPassword": {
+      "post": {
+        "tags": ["User"],
+        "description": "Endpoint to get token with username & password",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User name + password",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/forgetPassword"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/createNewPassword": {
+      "post": {
+        "tags": ["User"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/createNewPassword"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": [],
+            "LanguageCode": []
+          }
+        ]
+      }
+    },
+    "/user/:id": {
+      "get": {
+        "tags": ["User"],
+        "description": "Endpoint to get user by ID",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": ["User"],
+        "description": "Endpoint to update user by ID",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/addNewUser"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/{id}": {
+      "delete": {
+        "tags": ["User"],
+        "description": "Endpoint to delete user by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/user/:id/toggleActivation": {
+      "put": {
+        "tags": ["User"],
+        "description": "Endpoint to toggle user activation by ID",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "addNewUser": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "admin@meu-solutions.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "123456"
+        },
+        "first_name": {
+          "type": "string",
+          "example": "System"
+        },
+        "last_name": {
+          "type": "string",
+          "example": "Admin"
+        },
+        "permisionCodes": {
+          "type": "string",
+          "example": "[]"
+        }
+      },
+      "required": ["email", "password", "first_name", "last_name", "permisionCodes"]
+    },
+    "register": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "admin@meu-solutions.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "123456"
+        },
+        "re_password": {
+          "type": "string",
+          "example": "123456"
+        },
+        "first_name": {
+          "type": "string",
+          "example": "System"
+        },
+        "last_name": {
+          "type": "string",
+          "example": "Admin"
+        },
+        "username": {
+          "type": "string",
+          "example": "admin"
+        }
+      },
+      "required": ["email", "password", "re_password", "first_name", "last_name", "username"]
+    },
+    "login": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "admin@meu-solutions.com || admin"
+        },
+        "password": {
+          "type": "string",
+          "example": "123456"
+        }
+      },
+      "required": ["email", "password"]
+    },
+    "forgetPassword": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "admin@meu-solutions.com"
+        }
+      },
+      "required": ["email"]
+    },
+    "createNewPassword": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "6AHfsQbHA39u9BIe4Jti"
+        }
+      },
+      "required": ["code"]
+    },
+    "postPageConfig": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "example": "HOME"
+        },
+        "tab": {
+          "type": "string",
+          "example": "Từ khóa"
+        },
+        "description": {
+          "type": "string",
+          "example": "[{name: 'học bổng', value: 'https://hocbong'}]"
+        }
+      },
+      "required": ["category", "tab", "description"]
+    },
+    "putPageConfig": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": ""
+        },
+        "category": {
+          "type": "string",
+          "example": "HOME"
+        },
+        "tab": {
+          "type": "string",
+          "example": "Từ khóa"
+        },
+        "description": {
+          "type": "string",
+          "example": "[{name: 'học bổng', value: 'https://hocbong'}]"
+        }
+      },
+      "required": ["id", "category", "tab", "description"]
+    },
+    "putPageConfigTab": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "string",
+          "example": "[]"
+        }
+      }
+    },
+    "putPageConfigTabContent": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "example": "<h1>text editor content<h1>"
+        },
+        "type": {
+          "type": "string",
+          "example": "DESKTOP|TABLE|MOBILE"
+        }
+      }
+    },
+    "postFooter": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "CONNECT"
+        },
+        "name": {
+          "type": "string",
+          "example": "Cuộc sống sinh viên"
+        },
+        "value": {
+          "type": "string",
+          "example": "[{child: 'Câu lạc bộ sinh viên', url: 'https://clbsinhvien'},{child: 'Giải thưởng sinh viên', url: 'https://giaithuongsinhvien'}]"
+        },
+        "image": {
+          "type": "string",
+          "example": ""
+        },
+        "sequency": {
+          "type": "string",
+          "example": "0"
+        },
+        "display": {
+          "type": "boolean",
+          "example": true
+        }
+      },
+      "required": ["type", "name", "value", "image", "sequency", "display"]
+    },
+    "putFooter": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "CONNECT"
+        },
+        "name": {
+          "type": "string",
+          "example": "Cuộc sống sinh viên"
+        },
+        "value": {
+          "type": "string",
+          "example": "[{child: 'Câu lạc bộ sinh viên', url: 'https://clbsinhvien'},{child: 'Giải thưởng sinh viên', url: 'https://giaithuongsinhvien'}]"
+        },
+        "image": {
+          "type": "string",
+          "example": "/images/img.png"
+        },
+        "sequency": {
+          "type": "string",
+          "example": "0"
+        },
+        "display": {
+          "type": "boolean",
+          "example": true
+        }
+      },
+      "required": ["type", "name", "value", "image", "sequency", "display"]
+    },
+    "bulkPutFooter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": ""
+          },
+          "name": {
+            "type": "string",
+            "example": "Cuộc sống sinh viên"
+          },
+          "value": {
+            "type": "string",
+            "example": "[{child: 'Câu lạc bộ sinh viên', url: 'https://clbsinhvien'},{child: 'Giải thưởng sinh viên', url: 'https://giaithuongsinhvien'}]"
+          },
+          "image": {
+            "type": "string",
+            "example": "/images/img.png"
+          },
+          "sequency": {
+            "type": "string",
+            "example": "0"
+          },
+          "display": {
+            "type": "boolean",
+            "example": true
+          }
+        },
+        "required": ["id", "name", "value", "image", "sequency", "display"]
+      }
+    },
+    "postFeedback": {
+      "type": "object",
+      "properties": {
+        "customer_name": {
+          "type": "string",
+          "example": "dangdoan"
+        },
+        "customer_comment": {
+          "type": "string",
+          "example": "helloworld"
+        },
+        "customer_email": {
+          "type": "string",
+          "example": "dangdoan@meu-solutions.com"
+        }
+      },
+      "required": ["customer_name", "customer_comment", "customer_email"]
+    },
+    "putFeedback": {
+      "type": "object",
+      "properties": {
+        "customer_name": {
+          "type": "string",
+          "example": "dangdoan"
+        },
+        "customer_comment": {
+          "type": "string",
+          "example": "helloworld"
+        },
+        "customer_email": {
+          "type": "string",
+          "example": "dangdoan@meu-solutions.com"
+        }
+      },
+      "required": ["customer_name", "customer_comment", "customer_email"]
+    },
+    "postMenu": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Content"
+        },
+        "type": {
+          "type": "string",
+          "example": "MENU"
+        },
+        "content_type": {
+          "type": "string",
+          "example": "LINK"
+        },
+        "link": {
+          "type": "string",
+          "example": "https://meu-solutions.com/"
+        },
+        "sequence": {
+          "type": "number",
+          "example": 1
+        },
+        "display": {
+          "type": "boolean",
+          "example": true
+        },
+        "parent_id": {
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "required": ["name", "type", "content_type", "link", "sequence", "display", "parent_id"]
+    },
+    "postMenuAddConnects": {
+      "type": "object",
+      "properties": {
+        "postIds": {
+          "type": "array",
+          "example": ["00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000000"],
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["postIds"]
+    },
+    "deleteMenu": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "array",
+          "example": ["id1", "id2", "..."],
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["id"]
+    },
+    "postPost": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "New Post"
+        },
+        "seo_text": {
+          "type": "string",
+          "example": "new-post"
+        },
+        "description": {
+          "type": "string",
+          "example": ""
+        },
+        "sub_title": {
+          "type": "string",
+          "example": "Post title"
+        },
+        "image": {
+          "type": "string",
+          "example": "/image/image.jpg"
+        },
+        "display": {
+          "type": "boolean",
+          "example": true
+        },
+        "featured": {
+          "type": "boolean",
+          "example": false
+        },
+        "type": {
+          "type": "string",
+          "example": "POST"
+        },
+        "send_app": {
+          "type": "boolean",
+          "example": false
+        },
+        "send_app_group": {
+          "type": "number",
+          "example": 1
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "example": "00000000-0000-0000-0000-000000000000"
+              },
+              "name": {
+                "type": "string",
+                "example": "image.png"
+              },
+              "path": {
+                "type": "string",
+                "example": "path"
+              },
+              "content_type": {
+                "type": "string",
+                "example": "content_type"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "title",
+        "seo_text",
+        "description",
+        "sub_title",
+        "image",
+        "display",
+        "featured",
+        "type",
+        "send_app",
+        "send_app_group",
+        "attachments"
+      ]
+    },
+    "postConnect": {
+      "type": "object",
+      "properties": {
+        "post_id": {
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "menu_id": {
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "category_id": {
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "sub_category_id": {
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "required": ["post_id", "menu_id", "category_id", "sub_category_id"]
+    },
+    "postListConnect": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "00000000-0000-0000-0000-000000000000"
+          },
+          "menu_id": {
+            "type": "string",
+            "example": "00000000-0000-0000-0000-000000000000"
+          },
+          "category_id": {
+            "type": "string",
+            "example": "00000000-0000-0000-0000-000000000000"
+          },
+          "sub_category_id": {
+            "type": "string",
+            "example": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      }
+    },
+    "putPostSaveContent": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "example": "This is content"
+        }
+      },
+      "required": ["content"]
+    },
+    "postAnnouceCategory": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "New"
+        },
+        "seo_text": {
+          "type": "string",
+          "example": "SEO"
+        },
+        "description": {
+          "type": "string",
+          "example": "hello"
+        }
+      },
+      "required": ["name", "seo_text", "description"]
+    },
+    "putPostCategory": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Cuộc thi - giải thưởng"
+        },
+        "seo_text": {
+          "type": "string",
+          "example": "cuoc-thi-giai-thuong"
+        },
+        "description": {
+          "type": "string",
+          "example": "Cuộc thi - giải thưởng"
+        }
+      },
+      "required": ["name", "seo_text", "description"]
+    }
+  }
+}

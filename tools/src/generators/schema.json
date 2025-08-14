@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "GApi",
+  "title": "",
+  "type": "object",
+  "properties": {}
+}

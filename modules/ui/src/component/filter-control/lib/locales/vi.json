@@ -1,0 +1,31 @@
+{
+  "index": {
+    "filter": "Bộ lọc"
+  },
+  "searchBox": {
+    "inputPlaceholder": "Nhập tìm kiếm"
+  },
+  "filterBox": {
+    "logicalOperator": {
+      "and": "Và",
+      "or": "Hoặc"
+    },
+    "filterFieldBox": {
+      "placeholder": "Chọn trường"
+    },
+    "filterApiOperatorBox": {
+      "placeholder": "Chọn toán tử"
+    },
+    "filterValueBox": {
+      "inputPlaceholder": "Nhập từ khóa",
+      "comboboxPlaceholder": "Chọn",
+      "datePickerPlaceholder": "Chọn ngày"
+    }
+  },
+  "filterActions": {
+    "filterAddingButton": "Thêm bộ lọc",
+    "filterResetButton": "Đặt lại",
+    "filterSearchingButton": "Tìm kiếm",
+    "filterHidingButton": "Ẩn bộ lọc"
+  }
+}

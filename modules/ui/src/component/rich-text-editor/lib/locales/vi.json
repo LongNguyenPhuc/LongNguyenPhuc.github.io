@@ -1,0 +1,111 @@
+{
+  "placeholder": "Nhập nội dung...",
+  "bold": "In đậm",
+  "italic": "In nghiêng",
+  "underline": "Gạch chân",
+  "strike": "Gạch ngang",
+  "horizontalRule": "Đường ngang",
+  "leftAlign": "Căn trái",
+  "centerAlign": "Căn giữa",
+  "rightAlign": "Căn phải",
+  "justifyAlign": "Căn đều",
+  "codeBlock": "Mã nguồn",
+  "blockquote": "Trích dẫn",
+  "superscript": "Superscript",
+  "subscript": "Subscript",
+  "clearFormatting": "Xóa định dạng",
+  "headingLabel": "Tiêu đề",
+  "heading": {
+    "heading1": "Tiêu đề 1",
+    "heading2": "Tiêu đề 2",
+    "heading3": "Tiêu đề 3",
+    "heading4": "Tiêu đề 4",
+    "heading5": "Tiêu đề 5",
+    "heading6": "Tiêu đề 6"
+  },
+  "listLabel": "Danh sách",
+  "list": {
+    "bulletList": "Danh sách dấu đầu dòng",
+    "orderedList": "Danh sách có thứ tự",
+    "taskList": "Danh sách tác vụ"
+  },
+  "fontLabel": "Phong chữ",
+  "defaultFont": "Mặc định",
+  "fontSize": "Cỡ chữ",
+  "lineHeight": "Chiều cao dòng",
+  "uploadImage": {
+    "label": "Ảnh",
+    "tooltip": "Tải ảnh",
+    "error": "Đã có lỗi xảy ra. Vui lòng thực hiện lại!",
+    "invalid": "Định dạng ảnh không hợp lệ",
+    "isUploading": "Đang tải...",
+    "clickToUpload": "Click để tải hoặc kéo thả ảnh",
+    "addButton": "Thêm ảnh",
+    "tabLabel": "URL"
+  },
+  "uploadFile": {
+    "label": "File",
+    "tooltip": "Tải file",
+    "error": "Đã có lỗi xảy ra. Vui lòng thực hiện lại!",
+    "invalid": "Định dạng file không hợp lệ",
+    "isUploading": "Đang tải...",
+    "clickToUpload": "Click để tải hoặc kéo thả file",
+    "addButton": "Thêm file",
+    "tabLabel": "URL"
+  },
+  "uploadVideo": {
+    "invalid": "Định dạng video không hợp lệ",
+    "addButton": "Thêm video"
+  },
+  "mark": {
+    "cut": "Cắt",
+    "copy": "Sao chép",
+    "paste": "Dán",
+    "paintFormat": "Paint Format"
+  },
+  "table": {
+    "label": "Bảng",
+    "optionLabel": "Tùy chọn bảng",
+    "columnGroup": {
+      "label": "Thêm/Xóa cột",
+      "addBefore": "Thêm cột trước",
+      "addAfter": "Thêm cột sau",
+      "delete": "Xóa cột"
+    },
+    "rowGroup": {
+      "label": "Thêm/Xóa hàng",
+      "addBefore": "Thêm hàng trước",
+      "addAfter": "Thêm hàng sau",
+      "delete": "Xóa hàng"
+    },
+    "cellGroup": {
+      "label": "Gộp/Tách ô",
+      "merge": "Gộp ô",
+      "split": "Tách ô"
+    },
+    "header": {
+      "label": "Tiêu đề",
+      "toggleHeaderColumn": "Chuyển đổi hàng tiêu đề cột",
+      "toggleHeaderRow": "Chuyển đổi hàng tiêu đề",
+      "toggleHeaderCell": "Chuyển đổi ô tiêu đề"
+    },
+    "delete": "Xóa bảng",
+    "backgroundColor": "Màu nền",
+    "removeBackgroundColor": "Xóa màu nền"
+  },
+  "specialCharacter": "Ký tự đặc biệt",
+  "textColor": "Màu chữ",
+  "removeTextColor": "Xóa màu chữ",
+  "highlight": "Đánh dấu",
+  "removeHighlight": "Xóa đánh dấu",
+  "undo": "Hoàn tác",
+  "redo": "Làm lại",
+  "search": "Tìm kiếm",
+  "replace": "Thay thế",
+  "replaceAll": "Thay thế tất cả",
+  "replaceWith": "Thay thế bằng",
+  "zoomOut": "Thu nhỏ",
+  "fullscreen": "Toàn màn hình",
+  "preview": "Xem trước",
+  "print": "In"
+}

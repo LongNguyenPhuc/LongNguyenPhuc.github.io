@@ -1,0 +1,8 @@
+{
+  "isEmpty": "Không có dữ liệu",
+  "pagination": {
+    "pageInputLabel": "Di chuyển đến trang",
+    "pageSizeSelectionLabel": "Số dòng trên mỗi trang",
+    "totalPage": "Tổng số trang:"
+  }
+}

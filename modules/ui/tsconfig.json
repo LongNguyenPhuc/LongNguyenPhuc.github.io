@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lib-ui/*": ["./src/*"],
+      "@api/*": ["../api/*"],
+      "@assets/*": ["../../libs/assets/*"],
+      "@hooks/*": ["../../libs/hooks/*"],
+      "@i18n/*": ["../../libs/i18n/*"],
+      "@links/*": ["../../libs/links/*"],
+      "@mock/*": ["../../libs/mock/*"],
+      "@stores/*": ["../../libs/stores/*"],
+      "@styles/*": ["../../libs/styles/*"],
+      "@types/*": ["../../libs/@types/*"],
+      "@utils/*": ["../../libs/utils/*"]
+    }
+  },
+  "files": [],
+  "include": ["./package.json", "./src/**/*.ts", "./src/**/*.tsx", "../../libs/**/*.ts", "../**/*.ts"],
+  "references": [
+    {
+      "path": "./typescript/tsconfig.lib.json"
+    },
+    {
+      "path": "./typescript/tsconfig.storybook.json"
+    }
+  ],
+  "extends": "../../tsconfig.base.json"
+}

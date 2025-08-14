@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "g-api": {
+      "factory": "./src/generators/g-api",
+      "schema": "./src/generators/schema.json",
+      "description": "g-api generator"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "outDir": ".out/types",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "bundler",
+    "emitDeclarationOnly": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@fosco-frontend/ui/*": ["./modules/ui/src/*"],
+      "@lib-ui/*": ["./modules/ui/src/*"],
+      "@api/*": ["./modules/api/*"],
+      "@app-admin/*": ["./apps/admin/src/*"],
+      "@app-portal/*": ["./apps/portal/src/*"],
+      "@assets/*": ["./libs/assets/*"],
+      "@hooks/*": ["./libs/hooks/*"],
+      "@i18n/*": ["./libs/i18n/*"],
+      "@integrations/*": ["./libs/integrations/*"],
+      "@lib-types/*": ["./libs/types/*"],
+      "@links/*": ["./libs/links/*"],
+      "@schemas/*": ["./libs/schemas/*"],
+      "@stores/*": ["./libs/stores/*"],
+      "@styles/*": ["./libs/styles/*"],
+      "@types/*": ["./libs/@types/*"],
+      "@utils/*": ["./libs/utils/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

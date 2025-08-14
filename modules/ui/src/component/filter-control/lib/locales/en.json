@@ -1,0 +1,31 @@
+{
+  "index": {
+    "filter": "Filter"
+  },
+  "searchBox": {
+    "inputPlaceholder": "Enter search"
+  },
+  "filterBox": {
+    "logicalOperator": {
+      "and": "And",
+      "or": "Or"
+    },
+    "filterFieldBox": {
+      "placeholder": "Select field"
+    },
+    "filterApiOperatorBox": {
+      "placeholder": "Select operator"
+    },
+    "filterValueBox": {
+      "inputPlaceholder": "Enter keyword",
+      "comboboxPlaceholder": "Select",
+      "datePickerPlaceholder": "Select date"
+    }
+  },
+  "filterActions": {
+    "filterAddingButton": "Add filter",
+    "filterResetButton": "Reset",
+    "filterSearchingButton": "Search",
+    "filterHidingButton": "Hide filter"
+  }
+}
