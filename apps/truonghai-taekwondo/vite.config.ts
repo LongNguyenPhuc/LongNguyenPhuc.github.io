@@ -8,22 +8,23 @@ import { join, resolve } from 'path'
 //
 import { manualChunks } from '../../libs/build/vite'
 import { baseAlias } from '../../libs/build/(common)'
+import vike from 'vike/plugin'
 
 // CSS
 import autoprefixer from 'autoprefixer'
 import tailwindcss from '@tailwindcss/vite'
-
+console.log(__dirname)
 const baseDir = resolve(__dirname, '../../')
 export default defineConfig(() => ({
   root: __dirname,
   cacheDir: join(baseDir, 'node_modules/.vite/apps/truonghai-taekwondo'),
   server: { port: 4200, host: 'localhost' },
   preview: { port: 4300, host: 'localhost' },
-  plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md']), tailwindcss()],
+  plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md']), tailwindcss(), vike()],
   css: { postcss: { plugins: [autoprefixer()] } },
   define: { 'import.meta.env.built_at': new Date() },
   build: {
-    outDir: join(baseDir, 'dist/apps/truonghai-taekwondo'),
+    outDir: join(baseDir, 'dist/truonghai-taekwondo'),
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: { transformMixedEsModules: true },
